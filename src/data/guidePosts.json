@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "Plan Selection Guide",
+    "updated": "2024-04-08",
+    "content": "Basic Plan is good for small organization & businesses wants to promote their business online. Quality of the design will be same as upgraded plans. Online checkout or donation method can be added. You will also gain your own domain for your website or application. It is also recommended for businesses who wants to experience the services with low cost and gradually upgrade to Advanced or Premium service."
+
+  },
+  {
+    "id": 2,
+    "title": "Annual or Monthly cost for the Basic tier service",
+    "updated": "2024-04-08",
+    "content": "\nThe Basic Plan is ideal for small organizations and businesses seeking to establish an online presence. The design quality matches that of the upgraded plans, and features such as online checkout or donation methods can be seamlessly integrated. Additionally, clients will receive their own domain for their website or application. This plan is recommended for businesses looking to experience high-quality services at a lower cost, with the option to gradually upgrade to the Advanced or Premium service tiers."
+  },
+  {
+    "id": 3,
+    "title": "Annual or Monthly cost for the Advanced tier service",
+    "updated": "2024-04-08",
+    "content": "The Advanced Plan is suitable for small organizations and businesses that require more complex backend functionality, such as payroll management, attendance tracking, inventory control, and membership management. While still utilizing integrated file storage and a SQL server, the database is divided into individual clusters. Furthermore, clients will have access to an Admin panel for enhanced control over their business operations."
+  },
+  {
+    "id": 4,
+    "title": "Annual or Monthly cost for the Premium tier service",
+    "updated": "2024-04-08",
+    "content": "The Premium Plan caters to scalable businesses that anticipate significant traffic on their app or website. Clients will be assigned an individual AWS account, with all services, including EC2, Email Server, Cache Server, Load Balancer, and RDS, operating within the original Virtual Private Cloud (VPC)."
+  },
+  {
+    "id": 5,
+    "title": "Refund Policy",
+    "updated": "2024-04-09",
+    "content": "Charges will only be incurred once the client approves the first draft of the website. Following the presentation and modification phase, any additional features to be incorporated will be decided upon, and the billing process will commence."
+  }
+]

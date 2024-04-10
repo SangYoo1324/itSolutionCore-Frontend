@@ -1,0 +1,18 @@
+[
+  {
+    "Header": "options",
+    "accessor": "title"
+  },
+  {
+    "Header": "basic",
+    "accessor": "basic"
+  },
+  {
+    "Header": "advanced",
+    "accessor": "advanced"
+  },
+  {
+    "Header": "premium",
+    "accessor": "premium"
+  }
+]

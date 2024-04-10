@@ -1,0 +1,18 @@
+[
+  {
+    "Header": "id",
+    "accessor": "id",
+    "footer": "id"
+  },
+  {
+    "Header": "title",
+    "accessor": "title",
+    "footer": "title"
+  },
+  {
+    "Header": "updated",
+    "accessor": "updated",
+    "footer": "updated"
+  }
+
+]

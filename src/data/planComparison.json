@@ -1,0 +1,74 @@
+[
+  {
+    "title": "domain",
+    "basic": true,
+    "advanced": true,
+    "premium":true
+  },
+  {
+    "title": "pages",
+    "basic": 3,
+    "advanced": 5,
+    "premium":12
+  },
+  {
+    "title": "maintenance",
+    "basic": true,
+    "advanced": true,
+    "premium":true
+  },
+  {
+    "title": "responsive",
+    "basic": true,
+    "advanced": true,
+    "premium":true
+  },
+  {
+    "title": "originalBackendServer",
+    "basic": false,
+    "advanced": false,
+    "premium":true
+  },
+  {
+    "title": "maintenanceContinuity",
+    "basic": false,
+    "advanced": false,
+    "premium":true
+  },
+  {
+    "title": "secureBusinessEmail",
+    "basic": false,
+    "advanced": false,
+    "premium":true
+  },
+  {
+    "title": "acl",
+    "basic": false,
+    "advanced": false,
+    "premium":true
+  },
+  {
+    "title": "adminPanel",
+    "basic": false,
+    "advanced": true,
+    "premium":true
+  },
+  {
+    "title": "privateDB",
+    "basic": false,
+    "advanced": false,
+    "premium":true
+  },
+  {
+    "title": "loadBalancing",
+    "basic": false,
+    "advanced": true,
+    "premium":true
+  },
+  {
+    "title": "Cloud File Storage",
+    "basic": false,
+    "advanced": false,
+    "premium":true
+  }
+]

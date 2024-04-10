@@ -1,0 +1,67 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*overflow-x: hidden;*/
+  font-family: 'Outfit', sans-serif;
+
+}
+
+body{
+  background-color: black;
+}
+
+h1{
+  font-size: 1.5rem;
+}
+h1,h2, small, h4, h3, p, a{
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem 0.5rem;
+  overflow: visible;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: rgb(248,217,15);
+  color: #222;
+  border: 1px solid #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: transparent;
+  color: #fff;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  transition: 0.3s;
+}
+
+
+.dummy{
+  height: 100vh;
+}
+
+
+
+
+
+
+
+
