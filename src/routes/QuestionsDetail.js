@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from "styled-components";
 import {Link, useParams} from "react-router-dom";
 import HeroImg2 from "../components/common/HeroImg2";
 import {HashLink, NavHashLink} from "react-router-hash-link";
+import {useDispatch, useSelector} from "react-redux";
+import {asyncFetchQna} from "../redux/qna/QnASlice";
 
 const QuestionsDetailStyles = styled.div`
   h1 {
@@ -37,21 +39,29 @@ const QuestionsDetailStyles = styled.div`
 `;
 
 function QuestionsDetail(props) {
+    const dispatch = useDispatch();
+    const qna = useSelector(state=> state.qna);
+
 
     const { id } = useParams();
     console.log("id",id);
+    useEffect(()=>{
+        dispatch(asyncFetchQna(id));
+    },[]);
+
+
+
 
     return (
         <QuestionsDetailStyles>
             <HeroImg2 heading={'Questionaries'} text={''}/>
             <div className="container">
-                <h1>This is Title</h1>
+                {qna.loading && (<h1>Loading....</h1>)}
+                {!qna.loading && qna.data && (<h1>{qna.data.title}</h1>)}
                 <div className="bar"></div>
-                <p className="content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <HashLink to={'/contact#questions'} href="#" >Back ></HashLink>
+                {qna.loading && (<h1>Loading....</h1>)}
+                {qna.data && qna.data && ( <p className="content">{qna.data.content}</p>)}
+                <HashLink to={'/contact#questions'} href="#" >{'<'} Back</HashLink>
             </div>
         </QuestionsDetailStyles>
     );

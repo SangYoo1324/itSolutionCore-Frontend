@@ -25,9 +25,12 @@ const ContactFormStyles = styled.div`
 `
 
 function ContactForm(props) {
+
+
+
     return (
         <ContactFormStyles className="form">
-            <form action="">
+            <form >
                 <label >Your Name</label>
                 <input type="text"/>
                 <label >Email</label>

@@ -26,7 +26,6 @@ const BasicTableStyles = styled.div`
     font-size: 1rem;
     color: #fff;
     text-transform: uppercase;
-    
   }
   td{
     padding: 15px;
@@ -72,6 +71,13 @@ const BasicTableStyles = styled.div`
   .made-with-love a {
     color: #fff;
     text-decoration: none;
+  }
+  
+  @media screen and (max-width: 720px){
+    th, td{
+      font-size: 0.6rem;
+      overflow-wrap: break-word;
+    }
   }
     
 `;

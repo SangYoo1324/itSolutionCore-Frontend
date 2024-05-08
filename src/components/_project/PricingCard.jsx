@@ -147,7 +147,7 @@ function PricingCard(props) {
                     <div className="card" key={idx}>
                         <h3> - {solution.title} - </h3>
                         <div className="bar"></div>
-                        <p className="btc"> $ {solution.price}</p>
+                        <p className="btc"> $ {solution.price} / yr</p>
                         {solution.features.map((feature, idx)=>(
                             <p key={idx}> -  &nbsp;{feature} &nbsp;-</p>
                         ))}
