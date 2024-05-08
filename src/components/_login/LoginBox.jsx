@@ -7,6 +7,7 @@ import {asyncAuthLogin, asyncUserInfoFetch} from "../../redux/member/MemberSlice
 import {Facebook, Google} from "@mui/icons-material";
 import {Link, useNavigate} from "react-router-dom";
 import {asyncUserAuthVerify} from "../../redux/member/AuthVerificationSlice";
+import {env} from "../../_config/Env";
 const LoginPageStyles = styled.div` 
   
   
@@ -76,7 +77,9 @@ function LoginBox({setIsSignupTriggered}) {
         dispatch(asyncUserAuthVerify());
     }
     const handleGoogleLogin = ()=>{
-        window.location.href = "http://localhost:8080/api/public/google/login/itSolution"
+        console.log(env.api_path);
+        // itSolution => pathVariable for distinguishing redirection URL after google login complete
+        window.location.href = `${env.api_path}/api/public/google/login/itSolution`
     }
     const handleFacebookLogin = ()=>{
         alert("Sorry, Facebook Login is not available at this moment. Please try using Google login or general login!  \n -Thanks.");
