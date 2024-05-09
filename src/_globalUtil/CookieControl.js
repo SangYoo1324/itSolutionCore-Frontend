@@ -24,3 +24,8 @@ export const getTokenFromCookie = ()=>{
     //  cookieValues contains no properties = No Authorization Token exist, so return null
     return Object.keys(cookieValues).length>0 ? cookieValues: null;
 }
+
+
+export const setAuthCookie= (token)=>{
+    document.cookie = `Authorization=${token}; path=/;`;
+}

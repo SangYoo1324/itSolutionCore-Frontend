@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
 import {env} from "../../_config/Env";
-import {getTokenFromCookie} from "../../_globalUtil/CookieControl";
+import {getTokenFromCookie, setAuthCookie} from "../../_globalUtil/CookieControl";
 
 
 
@@ -12,7 +12,15 @@ export const asyncUserInfoFetch = createAsyncThunk('member/asyncFetch',async ()=
         data.append("jwtToken", token.Authorization);
         console.log("TOKEN: ", token);
         return await axios.post(`${env.api_path}/api/member`, data, {headers: {'Authorization': `Bearer ${token.Authorization}`}}).then(response => {
-           return response.data;
+           const respAuthHeader = response.headers.authorization;
+           if(respAuthHeader){
+               console.log("Auth header exists from response. set new Token.. "+respAuthHeader);
+               setAuthCookie(respAuthHeader.split(" ")[1]);
+           }else{
+               console.log("Auth header doesn't exists from response. It's already valid accessToken");
+           }
+
+            return response.data;
        }).catch(error => { // if axios fail, set member data null
            throw error;
        });
