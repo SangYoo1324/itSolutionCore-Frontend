@@ -12,12 +12,12 @@ import {asyncUserInfoFetch} from "./redux/member/MemberSlice";
 import LoadingCircle from "./components/common/LoadingCircle";
 import {asyncUserAuthVerify} from "./redux/member/AuthVerificationSlice";
 import {useLoading} from "./redux/context/LoadingContext";
+import {useParams} from "react-router-dom";
 
 function App() {
 /*
 *           User
 * */
-
     const {isLoading, setIsLoading} = useLoading();
     const dispatch = useDispatch();
     const userInfo = useSelector(state=> state.member);
@@ -30,6 +30,16 @@ function App() {
 
         // if authState is true or userInfo has not been fetched yet
         // to prevent collision with other component
+
+        // adding token from param(sent from oauth2 success)
+
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token'); // This will fetch the value of the token parameter from the URL
+        console.log("token:::"+token);
+        if(token){
+            document.cookie = `Authorization=${token}; path=/;`;
+        }
+
         if((!authVerification.admin && !authVerification.user) || userInfo.data){
             console.log("We're missing userInfo & Current AuthState. dispatch required")
             dispatch(asyncUserInfoFetch());
