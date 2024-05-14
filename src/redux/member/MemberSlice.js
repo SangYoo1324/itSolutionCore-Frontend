@@ -12,7 +12,7 @@ export const asyncUserInfoFetch = createAsyncThunk('member/asyncFetch',async ()=
         data.append("jwtToken", token.Authorization);
         console.log("TOKEN: ", token);
         return await axios.post(`${env.api_path}/api/member`, data, {headers: {'Authorization': `Bearer ${token.Authorization}`}}).then(response => {
-           const respAuthHeader = response.headers.authorization;
+           const respAuthHeader =  response.headers.get("Authorization");
            if(respAuthHeader){
                console.log("Auth header exists from response. set new Token.. "+respAuthHeader);
                setAuthCookie(respAuthHeader.split(" ")[1]);
