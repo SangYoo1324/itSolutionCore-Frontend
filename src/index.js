@@ -8,18 +8,20 @@ import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./redux/Store";
 import {LoadingProvider} from "./redux/context/LoadingContext";
+import { GlobalProvider } from './redux/context/GlobalContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <LoadingProvider>
+    <GlobalProvider>
+    <LoadingProvider>
           <Provider store={store} >
               <BrowserRouter>
                   <App />
               </BrowserRouter>
           </Provider>
       </LoadingProvider>
-
+    </GlobalProvider>
   </React.StrictMode>
 );
 

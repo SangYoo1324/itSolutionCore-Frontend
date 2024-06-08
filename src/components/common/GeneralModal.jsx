@@ -102,11 +102,6 @@ function GeneralModal({closeModal, width = '500px', height= '500px', backgroundC
                 <div className="body">
                     {content}
                 </div>
-                {/*<div className="footer">*/}
-                {/*    <button  onClick={()=>closeModal(false)}>Cancel</button>*/}
-                {/*    <button>Continue</button>*/}
-                {/*</div>*/}
-
             </div>
         </CombinedStyledComponent>
     );

@@ -212,16 +212,13 @@ function DashboardTable({data, columns}) {
                     Header: "updated",
                     accessor: "date",
                     Cell: ({value}) =>{
-                        console.log("value", value);
+                     
                         return format(value, 'dd/MM/yyyyy')
                     }
         }
 
     ]
 
-    // if path contains #
-    // const location = useLocation();
-     const questionsRef = useRef(null);
 
 
     const MemoColumns = useMemo(()=>groupColumns, []);
@@ -261,7 +258,7 @@ function DashboardTable({data, columns}) {
 
         const {globalFilter, pageIndex, pageSize}  = state;
     return (
-        <DashboardTableStyles className="container" ref={questionsRef}>
+        <DashboardTableStyles className="container">
             <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}/>
 
             <table {...getTableProps()}>

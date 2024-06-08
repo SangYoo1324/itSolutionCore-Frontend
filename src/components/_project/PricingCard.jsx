@@ -152,7 +152,7 @@ function PricingCard(props) {
                             <p key={idx}> -  &nbsp;{feature} &nbsp;-</p>
                         ))}
 
-                        <Link to="/contact" className="btn"> ASK NOW</Link>
+                        <Link to="/contact/#form" className="btn"> ASK NOW</Link>
                     </div>
 
             ))}

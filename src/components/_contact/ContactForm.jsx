@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from "styled-components";
 
 const ContactFormStyles = styled.div`
@@ -26,12 +27,26 @@ const ContactFormStyles = styled.div`
 
 function ContactForm(props) {
 
+  const {hash, pathname} = useLocation();
+  //
+  const formRef = useRef(null);
+
+  useEffect(()=>{
+    if(hash === "#form"){
+      console.log('====================================');
+      console.log('ContactForm: ', hash);
+      console.log('====================================');
+      setTimeout(() => {
+        formRef.current.scrollIntoView({ behavior: 'smooth' });
+      }, 700); // 애니메이션과 충돌을 피하기 위해 딜레이를 줌
+    }
+  },[hash]);
 
 
     return (
-        <ContactFormStyles className="form">
+        <ContactFormStyles className="form" id="section">
             <form >
-                <label >Your Name</label>
+                <label ref={formRef} id="form">Your Name</label>
                 <input type="text"/>
                 <label >Email</label>
                 <input type="text"/>

@@ -3,9 +3,6 @@ import styled from "styled-components";
 import SectionTitle from "../common/SectionTitle";
 import DashboardTable from "./DashboardTable";
 import {asyncFetchQna, asyncFetchQnaList, fetchQnaList} from "../../redux/qna/QnAListSlice"
-//dataSet
-// import GuidePostsColumns from "../../data/guidePosts_columns.json"
-// import GuidePosts from "../../data/guidePosts.json"
 import {useDispatch, useSelector} from "react-redux";
 
 

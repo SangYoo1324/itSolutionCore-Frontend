@@ -13,6 +13,7 @@ import LoadingCircle from "./components/common/LoadingCircle";
 import {asyncUserAuthVerify} from "./redux/member/AuthVerificationSlice";
 import {useLoading} from "./redux/context/LoadingContext";
 import {useParams} from "react-router-dom";
+import ScrollHelper from './components/_scroll_helper/ScrollHelper';
 
 function App() {
 /*
@@ -51,6 +52,7 @@ function App() {
     if(isLoading){
         return <>
             <Navbar/>
+            {/* <ScrollHelper/> */}
             <LoadingCircle/>
             <Footer/>
         </>
@@ -58,7 +60,9 @@ function App() {
 
   return (
       <>
+        
           <Navbar/>
+          <ScrollHelper/>
           {/*loading only when userInfo not loading*/}
          <AnimatedRoutes/>
           <Footer/>

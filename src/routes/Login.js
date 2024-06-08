@@ -6,7 +6,8 @@ import left_img from "../assets/login/login_page_left.jpg"
 import LoginBox from '../components/_login/LoginBox';
 import SignupBox from "../components/_login/SignupBox";
 import {useDispatch} from "react-redux";
-
+import {useContext} from "react";
+import { GlobalContext } from '../redux/context/GlobalContext';
 
 
 const LoginPageStyles = styled.div` 
@@ -41,11 +42,23 @@ const LoginPageStyles = styled.div`
 `
 
 function Login(props) {
+ 
+  const {isRouterAnimiationComplete, setIsRouterAnimiationComplete} = useContext(GlobalContext);
+
 
     const [isSignupTriggered,  setIsSignupTriggered] = useState(false);
     const dispatch = useDispatch();
     return (
-        <motion.div>
+        <motion.div
+        initial = {{width: 0}}
+        animate ={{width: "100%"}}
+        exit={{x: window.innerWidth}}
+        transition={{ duration: .5 }}
+        onAnimationComplete={() =>{
+          setIsRouterAnimiationComplete(true)
+          console.log(isRouterAnimiationComplete);
+      }}
+        >
             <LoginPageStyles>
                     <div className="bg"></div>
                 {/*<SignupBox />*/}
