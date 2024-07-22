@@ -36,21 +36,21 @@ const IntroStyles = styled.div`
     border-radius: 50%;
   }
 
-  .img-wrapper::before {
-    height: 300px;
-    width: 300px;
-    content: '';
-    position: absolute;
-    bottom: -100px; /* 이미지 아래로의 간격 조정 */
-    left: -100px; /* 이미지 좌측으로의 간격 조정 */
-    right: -100px; /* 이미지 우측으로의 간격 조정 */
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ZSSxn9Fohj2NK0BeNx89gI1FpjXt9zPcWunGHlRVFw&s");
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-    border-radius: 50%;
-    z-index: -1;
-  }
+  // .img-wrapper::before {
+  //   height: 300px;
+  //   width: 300px;
+  //   content: '';
+  //   position: absolute;
+  //   bottom: -100px; /* 이미지 아래로의 간격 조정 */
+  //   left: -100px; /* 이미지 좌측으로의 간격 조정 */
+  //   right: -100px; /* 이미지 우측으로의 간격 조정 */
+  //   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ZSSxn9Fohj2NK0BeNx89gI1FpjXt9zPcWunGHlRVFw&s");
+  //   background-size: cover;
+  //   background-position: center;
+  //   object-fit: cover;
+  //   border-radius: 50%;
+  //   z-index: -1;
+  // }
   
   @media screen and (max-width: 960px){
     
@@ -77,9 +77,14 @@ function Intro(props) {
             <div className="intro-container">
 
                 <div className="left">
-                    <div className="img-wrapper">
-                        <img src={selfie} alt=""/>
-                    </div>
+                    {/* <div className="img-wrapper"> */}
+                    <iframe  src="https://www.youtube.com/embed/QgmiN9L9hag" 
+                    className="mx-auto h-[400px] w-full md:w-[95%] md:h-[500px]"
+                    title="Welcome to PS IT Solution" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        {/* <img src={selfie} alt=""/> */}
+                    {/* </div> */}
                 </div>
                 <div className="right">
                     <div className="text-wrap mt-[2rem]">

@@ -33,11 +33,11 @@ function Home(props) {
 
 
             <HeroImg/>
-            <Link to="/contact#form" className="btn"> ASK NOW</Link>
+            
             <Intro/>
             <SkillSets/>
             <Stats/>
-
+            
 
             </motion.div>
 
